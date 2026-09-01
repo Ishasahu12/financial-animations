@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Animations</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+      min-height: 100vh;
+      color: white;
+      padding: 40px 20px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #00d4aa, #a29bfe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      text-align: center;
+      color: #8888aa;
+      margin-bottom: 40px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      gap: 30px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,212,170,0.2);
+    }
+    .card h2 {
+      padding: 20px;
+      font-size: 1.2rem;
+      color: #00d4aa;
+    }
+    .card video {
+      width: 100%;
+      display: block;
+    }
+    .card.full-width {
+      grid-column: 1 / -1;
+    }
+    .badge {
+      display: inline-block;
+      background: #00d4aa;
+      color: #0f0f1a;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Financial Animations</h1>
+  <p class="subtitle">Built with Remotion - React-based video creation</p>
+  
+  <div class="grid">
+    <div class="card full-width">
+      <h2>Dashboard Overview <span class="badge">15 sec</span></h2>
+      <video controls autoplay loop muted>
+        <source src="dashboard.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+    <div class="card">
+      <h2>Bar Chart <span class="badge">3 sec</span></h2>
+      <video controls loop muted>
+        <source src="barchart.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+    <div class="card">
+      <h2>Pie Chart <span class="badge">3 sec</span></h2>
+      <video controls loop muted>
+        <source src="piechart.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+    <div class="card">
+      <h2>Line Chart <span class="badge">3 sec</span></h2>
+      <video controls loop muted>
+        <source src="linechart.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+    <div class="card">
+      <h2>Number Counter <span class="badge">3 sec</span></h2>
+      <video controls loop muted>
+        <source src="numbercounter.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</body>
+</html>
